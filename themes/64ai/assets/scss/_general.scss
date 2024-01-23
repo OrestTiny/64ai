@@ -47,6 +47,10 @@ body {
   padding-top: 110px;
   background-color: #f2f2f2;
 
+  @include lg-max {
+    padding-top: 90px;
+  }
+
   &>main {
     flex: 1;
   }
@@ -349,5 +353,31 @@ div.wpforms-container-full button[type=submit] {
   &:hover {
     background-color: $light !important;
     color: $blue !important;
+  }
+}
+
+.wpforms-field-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 30px;
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    resize: none !important;
+  }
+
+  &>div {
+    flex: 1 0 100%;
+
+    &.sixtyai-half {
+      flex: 1 0 calc(50% - 15px);
+
+      @include md-max {
+        flex: 1 0 100%;
+      }
+    }
   }
 }
