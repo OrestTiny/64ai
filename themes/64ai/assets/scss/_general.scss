@@ -131,8 +131,8 @@ a {
   color: $dk;
   outline: 0;
   text-decoration: none;
-  transition: color 450ms ease;
-  font-weight: 600;
+  transition: color 450ms ease, border 450ms ease;
+  line-height: 1.4;
 
   &:hover,
   &:focus {
@@ -231,6 +231,11 @@ textarea {
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+svg,
+path {
+  transition: fill 450ms ease, stoke 450ms ease;
 }
 
 input {

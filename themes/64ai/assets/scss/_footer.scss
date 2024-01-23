@@ -1,8 +1,118 @@
 .sixtyia-footer {
   background-color: $light;
-  padding: 80px 0;
+  padding: 60px 0 0;
   text-align: center;
   z-index: 1;
 
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px 30px;
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      border-top: thin solid rgba(99, 99, 99, .3);
+      padding: 15px 0;
+      margin-top: 40px;
+
+      .footer-menu-sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    height: 80px;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &__menu {
+    flex: 1;
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 100px;
+
+      a {
+        display: inline-block;
+
+        &:hover {
+          color: var(--blue);
+          text-decoration: underline;
+        }
+      }
+
+      &>li {
+        &>a {
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  & &__social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 50%;
+      border: 1px solid $dk;
+
+      &:hover {
+        border-color: var(--blue);
+
+        path {
+          fill: var(--blue);
+        }
+      }
+    }
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
 
 }

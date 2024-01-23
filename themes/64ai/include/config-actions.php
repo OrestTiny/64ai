@@ -17,7 +17,9 @@ if (!function_exists('upqode_register_nav_menu')) {
   function upqode_register_nav_menu()
   {
     register_nav_menus(array(
-      'primary-menu' => esc_html__('Primary Menu', 'sixtyia'),
+      'primary-menu' => esc_html__('Header Menu', 'sixtyia'),
+      'footer-menu' => esc_html__('Footer Menu', 'sixtyia'),
+      'footer-menu-sec' => esc_html__('Footer Secondary Menu', 'sixtyia')
     ));
   }
 }
