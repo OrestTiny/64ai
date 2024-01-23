@@ -96,3 +96,26 @@ if (!function_exists('upqode_comments')) {
 <?php }
   }
 }
+
+
+
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
+{
+
+  function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+  {
+    parent::start_el($output, $item, $depth, $args, $id);
+
+    if ($args->walker->has_children) {
+      $output .= '<i class="icon-angle-down"></i>';
+    }
+  }
+
+  function end_el(&$output, $item, $depth = 0, $args = array())
+  {
+    parent::end_el($output, $item, $depth, $args);
+    if ($args->walker->has_children) {
+      $output .= '';
+    }
+  }
+}

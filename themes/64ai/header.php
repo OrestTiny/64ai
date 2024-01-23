@@ -32,6 +32,8 @@
   $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 
+  $btn_name = cmb2_get_option('64ai_main_options', '64ai_header_btn_name');
+  $btn_link = cmb2_get_option('64ai_main_options', '64ai_header_btn_link');
   ?>
 
   <div class="sixtyia-main">
@@ -51,12 +53,17 @@
               'container_class' => 'sixtyia-header__menu',
               'container' => 'nav',
               'menu_class' => 'header-menu',
-              'theme_location' => 'primary-menu'
+              'theme_location' => 'primary-menu',
+              'walker' => new Custom_Walker_Nav_Menu(),
             );
             wp_nav_menu($args);
           } else {
             echo wp_kses_post($alarm);
           } ?>
+
+          <?php if ($btn_name) { ?>
+            <a class="btn" target="_blank" rel="noopener" href="<?= esc_url($btn_link) ?>"><?= esc_html($btn_name, 'sixtyai') ?></a>
+          <?php  } ?>
 
           <button class="sixtyia-header__burger">
             <span></span>

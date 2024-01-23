@@ -131,13 +131,36 @@ a {
   color: $dk;
   outline: 0;
   text-decoration: none;
-  transition: color 450ms ease, border 450ms ease;
+  transition: color 350ms ease, border 350ms ease;
   line-height: 1.4;
 
   &:hover,
   &:focus {
     color: $blue;
   }
+}
+
+.btn {
+  padding: 12px 25px 10px;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 32px;
+  cursor: pointer;
+  color: $light;
+  border: thin solid $light;
+  background: $blue;
+  transition: all 350ms ease;
+
+  &:hover {
+    background: $light;
+    color: $blue;
+    border-color: $blue;
+  }
+
+  &:focus {
+    color: $light;
+  }
+
 }
 
 strong,
@@ -235,7 +258,7 @@ svg:not(:root) {
 
 svg,
 path {
-  transition: fill 450ms ease, stoke 450ms ease;
+  transition: fill 350ms ease, stoke 350ms ease;
 }
 
 input {

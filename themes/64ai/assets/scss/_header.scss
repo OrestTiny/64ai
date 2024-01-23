@@ -6,15 +6,7 @@
   z-index: 200;
   $th: &;
 
-  a {
-    color: $dk;
-    font-size: 18px;
-    font-weight: 600;
 
-    &:hover {
-      color: var(--blue);
-    }
-  }
 
   li {
     list-style: none;
@@ -31,9 +23,16 @@
     display: block;
     height: 80px;
 
+    &:hover {
+      img {
+        opacity: .8;
+      }
+    }
+
     img {
       width: auto;
       height: 100%;
+      transition: 350ms opacity ease;
     }
   }
 
@@ -41,6 +40,16 @@
     flex: 1;
     display: flex;
     justify-content: center;
+
+    a {
+      color: $dk;
+      font-size: 18px;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
 
     .header-menu {
       display: flex;
@@ -131,7 +140,7 @@
 
   &.menu-open {
     #{$th}__menu {
-      transition: transform 450ms;
+      transition: transform 350ms;
       transform: translate(0);
     }
   }

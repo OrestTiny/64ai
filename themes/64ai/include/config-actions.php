@@ -71,6 +71,7 @@ if (!function_exists('upqode_enqueue_scripts')) {
       wp_enqueue_style('sixtyia-blog-single', SIXTYAI_T_URI . '/assets/css/single.min.css');
     }
 
+    wp_enqueue_style('nesst-iconmoon', SIXTYAI_T_URI . '/assets/fonts/iconmoon/style.css');
     wp_enqueue_style('sixtyia-main-style', SIXTYAI_T_URI . '/assets/css/style.min.css');
     wp_enqueue_style('sixtyia-style', SIXTYAI_T_URI . '/style.css');
 
