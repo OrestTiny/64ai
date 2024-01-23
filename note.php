@@ -52,25 +52,25 @@ if (!function_exists('upqode_the_posts_navigation')) {
 
     if (!empty($prev_post)) {
       $prev_thumbnail_id = get_post_thumbnail_id($prev_post->ID);
-      $prev_post_title         = !empty(get_the_title($prev_post)) ? get_the_title($prev_post) : esc_html__('No title', 'upqode');
+      $prev_post_title         = !empty(get_the_title($prev_post)) ? get_the_title($prev_post) : esc_html__('No title', 'sixtyia');
       $prev_link               = get_permalink($prev_post);
     }
 
     if (!empty($next_post)) {
       $next_thumbnail_id       = get_post_thumbnail_id($next_post->ID);
-      $next_post_title         = !empty(get_the_title($next_post)) ? get_the_title($next_post) : esc_html__('No title', 'upqode');
+      $next_post_title         = !empty(get_the_title($next_post)) ? get_the_title($next_post) : esc_html__('No title', 'sixtyia');
       $next_link               = get_permalink($next_post);
     }
 
     echo '<div>';
     if (!empty($prev_post)) : ?>
-      <div class="upqode-single__pagination-prev">
+      <div class="sixtyia-single__pagination-prev">
         <a href="<?php echo esc_url($prev_link); ?>">
           <?php echo wp_kses($prev_post_title, 'post'); ?>
         </a>
 
         <a href="<?php echo esc_url($prev_link); ?>">
-          <span><?php esc_html_e('Prev', 'upqode'); ?></span>
+          <span><?php esc_html_e('Prev', 'sixtyia'); ?></span>
         </a>
 
         <?php if (!empty($prev_thumbnail_id)) { ?>
@@ -83,13 +83,13 @@ if (!function_exists('upqode_the_posts_navigation')) {
 
 
     if (!empty($next_post)) : ?>
-      <div class="upqode-single__pagination-next">
+      <div class="sixtyia-single__pagination-next">
         <a href="<?php echo esc_url($next_link); ?>">
           <?php echo wp_kses($next_post_title, 'post'); ?>
         </a>
 
         <a href="<?php echo esc_url($next_link); ?>">
-          <span><?php esc_html_e('Next', 'upqode'); ?></span>
+          <span><?php esc_html_e('Next', 'sixtyia'); ?></span>
         </a>
 
         <?php if (!empty($next_thumbnail_id)) { ?>
@@ -124,17 +124,17 @@ if (!function_exists('upqode_comment')) {
       case 'pingback':
       case 'trackback': ?>
         <div class="pinback">
-          <span class="pin-title"><?php esc_html_e('Pingback: ', 'upqode'); ?></span><?php comment_author_link(); ?>
-          <?php edit_comment_link(esc_html__('(Edit)', 'upqode'), '<span class="edit-link">', '</span>'); ?>
+          <span class="pin-title"><?php esc_html_e('Pingback: ', 'sixtyia'); ?></span><?php comment_author_link(); ?>
+          <?php edit_comment_link(esc_html__('(Edit)', 'sixtyia'), '<span class="edit-link">', '</span>'); ?>
 
         <?php
         break;
       default:
         // generate comments
         ?>
-          <div <?php comment_class('upqode-single__comments-item'); ?> id="li-comment-<?php comment_ID(); ?>">
-            <div id="comment-<?php comment_ID(); ?>" class="upqode-single__comments-item-wrap">
-              <div class="upqode-single__comments-content">
+          <div <?php comment_class('sixtyia-single__comments-item'); ?> id="li-comment-<?php comment_ID(); ?>">
+            <div id="comment-<?php comment_ID(); ?>" class="sixtyia-single__comments-item-wrap">
+              <div class="sixtyia-single__comments-content">
                 <span class="person-img">
                   <?php echo get_avatar($comment, '80', '', '', array('class' => 'img-person')); ?>
                 </span>
@@ -147,7 +147,7 @@ if (!function_exists('upqode_comment')) {
                       array_merge(
                         $args,
                         array(
-                          'reply_text' => esc_html__('Reply', 'upqode'),
+                          'reply_text' => esc_html__('Reply', 'sixtyia'),
                           'after'      => '',
                           'depth'      => $depth,
                           'max_depth'  => $args['max_depth']

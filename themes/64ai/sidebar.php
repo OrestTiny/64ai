@@ -5,14 +5,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Upqode
+ * @package Sixtyia
  */
 
-if (!is_active_sidebar('upqode-sidebar')) {
+if (!is_active_sidebar('sixtyia-sidebar')) {
   return;
 }
 ?>
 
-<aside class="upqode-sidebar">
-  <?php dynamic_sidebar('upqode-sidebar'); ?>
+<aside class="sixtyia-sidebar">
+  <?php dynamic_sidebar('sixtyia-sidebar'); ?>
 </aside>

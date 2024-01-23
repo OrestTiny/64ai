@@ -13,5 +13,5 @@ debug.log
 
 # But not these files...
 !.gitignore
-!themes/upqode
+!themes/sixtyia
 # etc...

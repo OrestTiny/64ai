@@ -10,45 +10,45 @@ while (have_posts()) : the_post();
 
 
 ?>
-	<section class="upqode-single" <?php post_class(); ?>>
-		<div class="container">
-			<div class="upqode-single__wrap">
+  <section class="sixtyia-single" <?php post_class(); ?>>
+    <div class="container">
+      <div class="sixtyia-single__wrap">
 
-				<?php the_title('<h1 class="upqode-single__title">', '</h1>'); ?>
+        <?php the_title('<h1 class="sixtyia-single__title">', '</h1>'); ?>
 
-				<?php if (has_post_thumbnail()) { ?>
-					<div class="upqode-single__banner">
-						<?php the_post_thumbnail(); ?>
-					</div>
-				<?php } ?>
+        <?php if (has_post_thumbnail()) { ?>
+          <div class="sixtyia-single__banner">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        <?php } ?>
 
-				<div class="upqode-single__categories">
-					<?php the_category(' '); ?>
-				</div>
+        <div class="sixtyia-single__categories">
+          <?php the_category(' '); ?>
+        </div>
 
-				<div class="upqode-single__author">
-					<?php upqode_posted_by_author() ?>
-				</div>
+        <div class="sixtyia-single__author">
+          <?php upqode_posted_by_author() ?>
+        </div>
 
-				<div class="upqode-single__date">
-					<?php echo get_the_date(); ?>
-				</div>
+        <div class="sixtyia-single__date">
+          <?php echo get_the_date(); ?>
+        </div>
 
-				<div class="upqode-single__content">
-					<?php the_content(); ?>
-				</div>
+        <div class="sixtyia-single__content">
+          <?php the_content(); ?>
+        </div>
 
-				<?php
-				the_tags(
-					'<div class="upqode-single__tags">',
-					' ',
-					'</div>'
-				); ?>
+        <?php
+        the_tags(
+          '<div class="sixtyia-single__tags">',
+          ' ',
+          '</div>'
+        ); ?>
 
 
-			</div>
-		</div>
-	</section>
+      </div>
+    </div>
+  </section>
 
 
 <?php endwhile;

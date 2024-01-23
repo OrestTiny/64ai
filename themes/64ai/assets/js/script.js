@@ -9,13 +9,13 @@
     });
   });
 
-  if (document.querySelector(".upqode-header") !== null) {
-    const headerEl = document.querySelector(".upqode-header");
+  if (document.querySelector(".sixtyia-header") !== null) {
+    const headerEl = document.querySelector(".sixtyia-header");
     const htmlEl = document.querySelector("html");
 
-    if (document.querySelector(".upqode-header__burger") !== null) {
+    if (document.querySelector(".sixtyia-header__burger") !== null) {
       document
-        .querySelector(".upqode-header__burger")
+        .querySelector(".sixtyia-header__burger")
         .addEventListener("click touchend", function (e) {
           e.preventDefault();
 
@@ -40,11 +40,11 @@
     if (
       window.screen.width > mobileMenuBreakpoint &&
       document.querySelector("html").classList.contains("no-scroll") &&
-      document.querySelector(".upqode-header__burger") !== null
+      document.querySelector(".sixtyia-header__burger") !== null
     ) {
       document.querySelector("html").classList.remove("no-scroll");
       document
-        .querySelector(".upqode-header__burger")
+        .querySelector(".sixtyia-header__burger")
         .classList.toggle("active");
     }
   }

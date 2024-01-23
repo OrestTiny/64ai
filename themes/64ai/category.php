@@ -10,24 +10,24 @@ get_header();
 $term = get_queried_object();
 $term_name = $term->taxonomy;
 
-$title = is_category() ? esc_html__('Category: ', 'upqode') . $term->name : $title;
-$title = is_tag() ? esc_html__('Tag: ', 'upqode') . $term->name : $title;
+$title = is_category() ? esc_html__('Category: ', 'sixtyia') . $term->name : $title;
+$title = is_tag() ? esc_html__('Tag: ', 'sixtyia') . $term->name : $title;
 
 
 if (have_posts()) : ?>
-  <section class="upqode-blog">
+  <section class="sixtyia-blog">
 
     <?php if (!empty($title)) { ?>
-      <div class="upqode-blog__heading">
+      <div class="sixtyia-blog__heading">
         <div class="container">
-          <h1><?php echo esc_html__($title, 'upqode'); ?></h1>
+          <h1><?php echo esc_html__($title, 'sixtyia'); ?></h1>
         </div>
       </div>
     <?php } ?>
 
-    <div class="upqode-blog__main">
+    <div class="sixtyia-blog__main">
       <div class="container">
-        <div class="upqode-blog__main-wrap">
+        <div class="sixtyia-blog__main-wrap">
           <?php while (have_posts()) : the_post();
 
             upqode_post_card();

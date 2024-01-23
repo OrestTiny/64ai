@@ -7,24 +7,24 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Upqode
+ * @package Sixtyia
  */
 
 
-$footer_text = esc_html__('&copy;', 'upqode') . date('Y') . ' ' . get_bloginfo('name') . esc_html__('All Rights Reserved.', 'upqode');
+$footer_text = esc_html__('&copy;', 'sixtyia') . date('Y') . ' ' . get_bloginfo('name') . esc_html__('All Rights Reserved.', 'sixtyia');
 ?>
 
 </main>
 
-<footer class="upqode-footer">
+<footer class="sixtyia-footer">
   <div class="container">
-    <div class="upqode-footer__wrap">
-      <div class="upqode-footer__development">
-        <a href="https://upqode.com/web-design/" rel="noopener" target="_blank">Web Design</a> and
-        <a href="https://upqode.com/wordpress-development/" rel="noopener" target="_blank">Development</a> by
-        <a href="https://upqode.com/" rel="noopener" target="_blank">UPQODE</a>
+    <div class="sixtyia-footer__wrap">
+      <div class="sixtyia-footer__development">
+        <a href="https://sixtyia.com/web-design/" rel="noopener" target="_blank">Web Design</a> and
+        <a href="https://sixtyia.com/wordpress-development/" rel="noopener" target="_blank">Development</a> by
+        <a href="https://sixtyia.com/" rel="noopener" target="_blank">SIXTYAI</a>
       </div>
-      <div class="upqode-footer__copyright"><?php echo wp_kses($footer_text, 'upqode'); ?></div>
+      <div class="sixtyia-footer__copyright"><?php echo wp_kses($footer_text, 'sixtyia'); ?></div>
     </div>
   </div>
 </footer>

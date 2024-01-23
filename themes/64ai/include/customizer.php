@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Upqode Theme Customizer
+ * Sixtyia Theme Customizer
  *
- * @package Upqode
+ * @package Sixtyia
  */
 
 /**
@@ -13,20 +13,20 @@
  */
 function upqode_customize_register($wp_customize)
 {
-	$wp_customize->get_setting('blogname')->transport         = 'postMessage';
-	$wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
-	$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+  $wp_customize->get_setting('blogname')->transport         = 'postMessage';
+  $wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
+  $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
-	if (isset($wp_customize->selective_refresh)) {
-		$wp_customize->selective_refresh->add_partial('blogname', array(
-			'selector'        => '.site-title a',
-			'render_callback' => 'upqode_customize_partial_blogname',
-		));
-		$wp_customize->selective_refresh->add_partial('blogdescription', array(
-			'selector'        => '.site-description',
-			'render_callback' => 'upqode_customize_partial_blogdescription',
-		));
-	}
+  if (isset($wp_customize->selective_refresh)) {
+    $wp_customize->selective_refresh->add_partial('blogname', array(
+      'selector'        => '.site-title a',
+      'render_callback' => 'upqode_customize_partial_blogname',
+    ));
+    $wp_customize->selective_refresh->add_partial('blogdescription', array(
+      'selector'        => '.site-description',
+      'render_callback' => 'upqode_customize_partial_blogdescription',
+    ));
+  }
 }
 add_action('customize_register', 'upqode_customize_register');
 
@@ -37,7 +37,7 @@ add_action('customize_register', 'upqode_customize_register');
  */
 function upqode_customize_partial_blogname()
 {
-	bloginfo('name');
+  bloginfo('name');
 }
 
 /**
@@ -47,7 +47,7 @@ function upqode_customize_partial_blogname()
  */
 function upqode_customize_partial_blogdescription()
 {
-	bloginfo('description');
+  bloginfo('description');
 }
 
 /**
@@ -55,6 +55,6 @@ function upqode_customize_partial_blogdescription()
  */
 function upqode_customize_preview_js()
 {
-	wp_enqueue_script('upqode-customizer', get_template_directory_uri() . '/assets/js/lib/customizer.js', array('customize-preview'), '', true);
+  wp_enqueue_script('sixtyia-customizer', get_template_directory_uri() . '/assets/js/lib/customizer.js', array('customize-preview'), '', true);
 }
 add_action('customize_preview_init', 'upqode_customize_preview_js');

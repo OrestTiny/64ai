@@ -1,39 +1,39 @@
 <section class="upqode__not-found">
-    <div class="container">
-        <h1 class="page-title"><?php esc_html_e('Nothing Found', 'upqode'); ?></h1>
+  <div class="container">
+    <h1 class="page-title"><?php esc_html_e('Nothing Found', 'sixtyia'); ?></h1>
 
-        <div>
-            <?php
-            if (is_home() && current_user_can('publish_posts')) :
+    <div>
+      <?php
+      if (is_home() && current_user_can('publish_posts')) :
 
-                printf(
-                    '<p>' . wp_kses(
-                        esc_html__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'upqode'),
-                        array(
-                            'a' => array(
-                                'href' => array(),
-                            ),
-                        )
-                    ) . '</p>',
-                    esc_url(admin_url('post-new.php'))
-                );
+        printf(
+          '<p>' . wp_kses(
+            esc_html__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'sixtyia'),
+            array(
+              'a' => array(
+                'href' => array(),
+              ),
+            )
+          ) . '</p>',
+          esc_url(admin_url('post-new.php'))
+        );
 
-            elseif (is_search()) :
-            ?>
+      elseif (is_search()) :
+      ?>
 
-                <p><?php esc_html__('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'upqode'); ?></p>
-            <?php
-                get_search_form();
+        <p><?php esc_html__('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sixtyia'); ?></p>
+      <?php
+        get_search_form();
 
-            else :
-            ?>
+      else :
+      ?>
 
-                <p><?php esc_html__('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'upqode'); ?></p>
-            <?php
-                get_search_form();
+        <p><?php esc_html__('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'sixtyia'); ?></p>
+      <?php
+        get_search_form();
 
-            endif;
-            ?>
-        </div>
+      endif;
+      ?>
     </div>
+  </div>
 </section>

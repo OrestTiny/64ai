@@ -17,26 +17,26 @@ const gulp = require("gulp"),
 const path = {
   scss: {
     src: [
-      "./upqode/assets/scss/*.scss",
-      "!./upqode/assets/scss/gutenberg.scss",
+      "./themes/64ai/assets/scss/*.scss",
+      "!./themes/64ai/assets/scss/gutenberg.scss",
     ],
-    dest: "./upqode/assets/css",
+    dest: "./themes/64ai/assets/css",
   },
   scss_gutenberg: {
-    src: ["./upqode/assets/scss/gutenberg.scss"],
-    dest: "./upqode/assets/css",
+    src: ["./themes/64ai/assets/scss/gutenberg.scss"],
+    dest: "./themes/64ai/assets/css",
   },
   scss_inner: {
-    src: ["./upqode/assets/scss/**/*.scss", "!./upqode/assets/scss/*.scss"],
-    dest: "./upqode/assets/css",
+    src: ["./themes/64ai/assets/scss/**/*.scss", "!./64ai/assets/scss/*.scss"],
+    dest: "./themes/64ai/assets/css",
   },
   js: {
     src: [
-      "./upqode/assets/js/**/*.js",
-      "!./upqode/assets/js/**/*.min.js",
-      "!./upqode/assets/js/lib{,/**}/*.js",
+      "./themes/64ai/assets/js/**/*.js",
+      "!./themes/64ai/assets/js/**/*.min.js",
+      "!./themes/64ai/assets/js/lib{,/**}/*.js",
     ],
-    dest: "./upqode/assets/js",
+    dest: "./64ai/assets/js",
   },
 };
 

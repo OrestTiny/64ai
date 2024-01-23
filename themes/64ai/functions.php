@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Upqode functions and definitions
+ * Sixtyia functions and definitions
  *
  * @package WordPress*
- * @package Upqode
- * @since Upqode 1.0
+ * @package Sixtyia
+ * @since Sixtyia 1.0
  */
 
 // Do not allow directly accessing this file.
 if (!defined('ABSPATH')) {
-	exit('Direct script access denied.');
+  exit('Direct script access denied.');
 }
 
 defined('UPQODE_T_URI') or define('UPQODE_T_URI', get_template_directory_uri());
