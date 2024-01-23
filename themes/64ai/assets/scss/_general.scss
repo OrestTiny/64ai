@@ -141,7 +141,7 @@ a {
 }
 
 .btn {
-  padding: 12px 25px 10px;
+  padding: 8px 23px;
   font-size: 18px;
   line-height: 1;
   border-radius: 32px;
@@ -332,4 +332,22 @@ input {
 
 .overflow-full {
   overflow: hidden;
+}
+
+
+div.wpforms-container-full button[type=submit] {
+  padding: 8px 23px !important;
+  line-height: 1 !important;
+  border-radius: 32px !important;
+  color: var(--light) !important;
+  border: thin solid var(--light) !important;
+  background: var(--e-global-color-accent) !important;
+  transition: 350ms;
+  outline: none !important;
+  box-shadow: none !important;
+
+  &:hover {
+    background-color: $light !important;
+    color: $blue !important;
+  }
 }

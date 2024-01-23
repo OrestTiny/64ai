@@ -65,7 +65,7 @@
       height: 100%;
       display: grid;
       place-content: center;
-      transform: translateY(-2px);
+      // transform: translateY(-2px);
 
       @include lg-max {
         height: auto;
@@ -117,7 +117,7 @@
             }
 
             i {
-              transform: scale(1, -1) translateY(2px);
+              transform: scale(1, -1);
             }
 
             &>.sub-menu {
@@ -183,6 +183,12 @@
           border-bottom: 1px solid rgba(84, 72, 80, 0.25);
           box-shadow: 0px 6px 34px rgba(0, 0, 0, 0.16);
           margin: 0;
+
+          .current_page_item {
+            &>a {
+              color: var(--blue);
+            }
+          }
 
           a {
             color: $dk;
@@ -270,7 +276,6 @@
       inset: 90px 0 0;
       background-color: $light;
       width: 300px;
-      height: 100%;
       padding: 30px;
       overflow: hidden auto;
       justify-content: flex-start;

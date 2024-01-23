@@ -21,10 +21,11 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    gap: 40px 60px;
+    gap: 40px 120px;
 
     @include sm-max {
       flex-direction: column;
+      gap: 40px 60px;
     }
 
     &-left {
@@ -76,13 +77,32 @@
     flex: 1;
 
     .footer-menu {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 100px;
+      text-align: left;
+
+      @include lg-min {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @include lg-max {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        &>* {
+          flex: 1 0 calc(50% - 60px);
+          min-width: 250px;
+        }
+      }
 
       @include sm-max {
         justify-content: flex-start;
+
+        &>* {
+          flex: 1 0 calc(100%);
+        }
       }
 
       a {
