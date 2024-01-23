@@ -27,11 +27,11 @@
       font-size: 1rem;
 
       &:hover {
-        color: $gr;
+        color: $dk
       }
 
       &.current {
-        background: $gr;
+        background: $dk;
         color: $light;
         padding: 10px 15px;
         font-weight: 500;

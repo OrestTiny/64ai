@@ -5,7 +5,7 @@
   line-height: 1.5;
   font-size: $font-size;
   font-family: $font-family;
-  color: $gr;
+  color: $dk;
   position: relative;
   background: #F6F9FC;
   padding-top: 50px;
@@ -145,7 +145,7 @@ figure figcaption {
   font-size: 50px;
   font-weight: 700;
   word-wrap: break-word;
-  color: $dk !important
+  color: $dk !important;
 }
 
 @media screen and (max-width:767px) {
@@ -174,7 +174,7 @@ figure figcaption {
   border-right: none !important;
   border-top: 1px solid !important;
   border-bottom: 1px solid !important;
-  border-color: rgba($ca-gr, .15);
+  border-color: rgba($ca-dk, .15);
   -webkit-box-shadow: none;
   box-shadow: none;
   margin: 1rem 0 2rem;
@@ -238,7 +238,7 @@ figure figcaption {
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
-  color: $gr;
+  color: $dk;
   font-style: normal;
   display: block;
   margin-top: 2rem
@@ -285,7 +285,7 @@ figure figcaption {
 }
 
 .editor-styles-wrapper .wp-block .block-library-rich-text__tinymce blockquote {
-  border-color: rgba($ca-gr, .15) !important
+  border-color: rgba($ca-dk, .15) !important
 }
 
 .editor-styles-wrapper .wp-block .wp-caption a {
@@ -295,7 +295,7 @@ figure figcaption {
 .editor-styles-wrapper .wp-block dl.wp-caption {
   font-size: 13px;
   line-height: 1.5;
-  color: $gr;
+  color: $dk;
   margin-top: 10px
 }
 
@@ -303,7 +303,7 @@ figure figcaption {
   word-break: break-word;
   font-size: 13px;
   line-height: 1.5;
-  color: $gr
+  color: $dk;
 }
 
 .editor-styles-wrapper .wp-block .alignleft,
@@ -357,7 +357,7 @@ figure figcaption {
 .editor-styles-wrapper .wp-block b,
 .editor-styles-wrapper .wp-block strong {
   font-weight: 700;
-  color: $dk
+  color: $dk;
 }
 
 .editor-styles-wrapper .wp-block .wp-block-file__textlink,
@@ -496,7 +496,7 @@ figure figcaption {
   padding: 3px 4px 4px;
   border-radius: 5px;
   background-color: rgba($ca-dk, .08);
-  color: $dk
+  color: $dk;
 }
 
 .editor-styles-wrapper .wp-block tt {
@@ -505,7 +505,7 @@ figure figcaption {
   padding: 3px 4px 4px;
   border-radius: 5px;
   background-color: rgba($ca-dk, .08);
-  color: $dk
+  color: $dk;
 }
 
 .editor-styles-wrapper .wp-block select {
@@ -583,7 +583,7 @@ figure figcaption {
 
 .editor-styles-wrapper .wp-block figcaption {
   margin-top: 0;
-  color: $gr;
+  color: $dk;
   text-align: inherit
 }
 
@@ -836,7 +836,7 @@ figure figcaption {
 .editor-styles-wrapper .wp-block-latest-comments__comment-date {
   font-size: 13px;
   margin-top: 6px;
-  color: $gr
+  color: $dk
 }
 
 .editor-styles-wrapper .wp-block-latest-posts li {
@@ -849,7 +849,7 @@ figure figcaption {
 
 .editor-styles-wrapper .wp-block-latest-posts li time {
   font-size: 13px;
-  color: $gr
+  color: $dk
 }
 
 .editor-styles-wrapper .wp-block-separator {

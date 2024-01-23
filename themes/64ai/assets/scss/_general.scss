@@ -15,7 +15,7 @@ body {
   position: relative;
   font-size: $font-size;
   font-family: $font-family;
-  color: $gr;
+  color: $dk;
   line-height: $line-height;
 }
 
@@ -44,7 +44,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 110px;
+  background-color: #f2f2f2;
 
   &>main {
     flex: 1;
@@ -206,7 +207,7 @@ table {
 }
 
 select {
-  border: 1px solid $gr;
+  border: 1px solid $dk;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
@@ -222,7 +223,7 @@ select {
 textarea {
   width: 100%;
   min-height: 150px;
-  border: 1px solid $gr;
+  border: 1px solid $dk;
   color: $dk;
   outline: 0 none;
   padding: 5px;
@@ -249,7 +250,7 @@ input {
   }
 
   &::placeholder {
-    color: $gr;
+    color: $dk;
   }
 
   &[disabled] {

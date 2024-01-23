@@ -221,12 +221,12 @@
           margin-left: auto;
           padding: 4px 10px;
           background: $light;
-          color: $gr;
+          color: $dk;
           border: 3px solid $light;
           display: inline-block;
 
           b {
-            color: $gr;
+            color: $dk;
             font-size: .9rem;
           }
         }
@@ -307,7 +307,7 @@
   p,
   ol,
   ul {
-    color: $gr;
+    color: $dk;
     line-height: 1.5;
   }
 
@@ -357,7 +357,7 @@
 
   a {
     text-decoration: none;
-    color: $gr;
+    color: $dk;
 
     &:hover {
       color: $pr;
@@ -369,7 +369,7 @@
     min-width: 100%;
     outline: none !important;
     background: $light;
-    color: $gr;
+    color: $dk;
     border: 1px solid rgba($ca-dk, .15) !important;
     max-height: calc(1.2em + 17px);
     height: calc(1.2em + 17px);
@@ -399,7 +399,7 @@
     }
 
     td {
-      color: $gr;
+      color: $dk;
 
       a {
         font-weight: 400;
@@ -483,7 +483,7 @@
       .rss-date {
         display: block;
         font-size: 13px;
-        color: $gr;
+        color: $dk;
         margin-bottom: 10px;
         margin-top: 11px;
       }
