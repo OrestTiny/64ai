@@ -3,10 +3,8 @@
   position: fixed;
   inset: 0 0 auto;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  z-index: 200;
+  z-index: 9999;
   $th: &;
-
-
 
   li {
     list-style: none;
@@ -17,11 +15,22 @@
     align-items: center;
     justify-content: space-between;
     height: 110px;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    @include lg-max {
+      height: 90px;
+    }
   }
 
   &__logo {
     display: block;
     height: 80px;
+
+    @include lg-max {
+      height: 100%;
+      padding: 10px 0;
+    }
 
     &:hover {
       img {
@@ -36,10 +45,37 @@
     }
   }
 
+  &__button {
+    @include lg-max {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
   &__menu {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+
+    .icon-angle-down {
+      font-size: .5em;
+      cursor: pointer;
+      transition: transform .45s cubic-bezier(.19, 1, .22, 1);
+      height: 100%;
+      display: grid;
+      place-content: center;
+      transform: translateY(-2px);
+
+      @include lg-max {
+        height: auto;
+        margin-left: auto;
+
+        &:hover {
+          color: var(--blue);
+        }
+      }
+    }
 
     a {
       color: $dk;
@@ -53,27 +89,82 @@
 
     .header-menu {
       display: flex;
-      gap: 20px;
+      gap: 40px;
+      padding: 0;
+      margin: 0;
+
+      @include lg-max {
+        gap: 15px;
+        width: 100%;
+      }
+
+      .current_page_item {
+
+        &>a,
+        &>i {
+          color: $blue;
+        }
+      }
+
+      .menu-item-has-children {
+
+        &:hover {
+          @include lg-min {
+
+            &>a,
+            &>i {
+              color: $blue ;
+            }
+
+            i {
+              transform: scale(1, -1) translateY(2px);
+            }
+
+            &>.sub-menu {
+              animation: slide-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+          }
+        }
+
+        @include lg-max {
+          display: flex;
+          flex-wrap: wrap;
+
+          .sub-menu {
+            flex: 1 0 100%;
+            padding: 0;
+            margin: 0 0 0 10px;
+            display: none;
+
+            a {
+              font-weight: 400;
+            }
+          }
+        }
+
+        &>a {
+          padding: 10px 5px 10px 0;
+        }
+
+        &.noLink {
+          @include lg-min {
+
+            &>a,
+            &>i {
+              color: $dk;
+              cursor: default;
+            }
+          }
+        }
+      }
 
       @include lg-min {
         &>li {
           position: relative;
 
-          &:hover>.sub-menu {
-            opacity: 1;
-            visibility: visible;
-          }
-
           &:has(.sub-menu) {
             display: flex;
             align-items: center;
-            gap: 5px;
-
-            &::after {
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
-              line-height: 0;
-              width: 10px;
-            }
           }
         }
 
@@ -84,11 +175,24 @@
           left: 0;
           top: 100%;
           background-color: $light;
-          width: 150px;
-          box-shadow: 0 0 14px 4px rgba(0, 0, 0, .4);
+          width: 325px;
+          padding: 32px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          border-bottom: 1px solid rgba(84, 72, 80, 0.25);
+          box-shadow: 0px 6px 34px rgba(0, 0, 0, 0.16);
+          margin: 0;
 
           a {
             color: $dk;
+            font-weight: 400;
+
+            &:hover {
+              color: $blue;
+              text-decoration: underline;
+              text-underline-offset: 2px;
+            }
           }
         }
       }
@@ -98,19 +202,64 @@
 
   // ! Burger
   &__burger {
-    display: none;
+    @include lg-min {
+      display: none;
+    }
 
     @include lg-max {
-      width: 25px;
+      width: 30px;
       height: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      position: relative;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      cursor: pointer;
+
+      &.active {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            top: -2px;
+            left: 5px
+          }
+
+          &:nth-child(2) {
+            width: 0%;
+            opacity: 0
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 19px;
+            left: 5px
+          }
+        }
+      }
 
       &>span {
-        width: 100%;
+        display: block;
+        position: absolute;
         height: 2px;
-        background-color: $light;
+        width: 100%;
+        background: #000;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+
+        &:nth-child(1) {
+          top: 0px;
+          transform-origin: left center
+        }
+
+        &:nth-child(2) {
+          top: 9px;
+          transform-origin: left center
+        }
+
+        &:nth-child(3) {
+          top: 18px;
+          transform-origin: left center
+        }
       }
     }
   }
@@ -118,14 +267,14 @@
   &__menu {
     @include lg-max {
       position: fixed;
-      inset: 0;
+      inset: 90px 0 0;
       background-color: $light;
       width: 300px;
+      height: 100%;
       padding: 30px;
       overflow: hidden auto;
       justify-content: flex-start;
       transform: translateX(-200%);
-
 
       a {
         color: $dk;
@@ -137,11 +286,41 @@
     }
   }
 
-
   &.menu-open {
     #{$th}__menu {
+      box-shadow: 18px 20px 30px -10px rgba(0, 0, 0, .16);
       transition: transform 350ms;
       transform: translate(0);
     }
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.sixtyia-overlay {
+  z-index: 998;
+  opacity: 0;
+  transition: .45s cubic-bezier(.19, 1, .22, 1);
+  background: rgba(41, 41, 41, .7);
+
+  &.active {
+    position: fixed;
+    inset: 0;
+    opacity: 1;
   }
 }

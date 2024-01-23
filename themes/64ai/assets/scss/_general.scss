@@ -256,9 +256,10 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+i,
 svg,
 path {
-  transition: fill 350ms ease, stoke 350ms ease;
+  transition: fill 350ms ease, stoke 350ms ease, color 350ms ease;
 }
 
 input {

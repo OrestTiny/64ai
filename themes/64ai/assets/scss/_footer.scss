@@ -92,9 +92,22 @@
           color: var(--blue);
           text-decoration: underline;
         }
+
       }
 
       &>li {
+        &.noLink {
+          &>a {
+
+            &:hover,
+            &:focus {
+              color: currentColor;
+              text-decoration: none;
+              cursor: default;
+            }
+          }
+        }
+
         &>a {
           font-weight: 600;
           margin-bottom: 10px;

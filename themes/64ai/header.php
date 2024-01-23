@@ -35,7 +35,7 @@
   $btn_name = cmb2_get_option('64ai_main_options', '64ai_header_btn_name');
   $btn_link = cmb2_get_option('64ai_main_options', '64ai_header_btn_link');
   ?>
-
+  <div class="sixtyia-overlay"></div>
   <div class="sixtyia-main">
     <header class="sixtyia-header">
       <div class="container">
@@ -62,14 +62,16 @@
           } ?>
 
           <?php if ($btn_name) { ?>
-            <a class="btn" target="_blank" rel="noopener" href="<?= esc_url($btn_link) ?>"><?= esc_html($btn_name, 'sixtyai') ?></a>
+            <div class="sixtyia-header__button">
+              <a class="btn" target="_blank" rel="noopener" href="<?= esc_url($btn_link) ?>"><?= esc_html($btn_name, 'sixtyai') ?></a>
+            </div>
           <?php  } ?>
 
-          <button class="sixtyia-header__burger">
+          <div class="sixtyia-header__burger">
             <span></span>
             <span></span>
             <span></span>
-          </button>
+          </div>
         </div>
       </div>
     </header>

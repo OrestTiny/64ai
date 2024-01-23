@@ -36,7 +36,7 @@ const path = {
       "!./themes/64ai/assets/js/**/*.min.js",
       "!./themes/64ai/assets/js/lib{,/**}/*.js",
     ],
-    dest: "./64ai/assets/js",
+    dest: "./themes/64ai/assets/js",
   },
 };
 
