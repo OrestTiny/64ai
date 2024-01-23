@@ -27,6 +27,11 @@
   <?php wp_body_open();
 
   $alarm = '<h4>' . esc_html__('Please register Top Navigation from', 'sixtyia') . ' <a href="' . esc_url(admin_url('nav-menus.php')) . '" target="_blank">' . esc_html__('Appearance &gt; Menus', 'sixtyia') . '</a></h4>';
+
+  $custom_logo_id = get_theme_mod('custom_logo');
+  $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+
   ?>
 
   <div class="sixtyia-main">
@@ -34,7 +39,11 @@
       <div class="container">
         <div class="sixtyia-header__wrapper">
           <a class="sixtyia-header__logo" href="<?php echo esc_url(home_url('/')); ?>">
-            <span><?php echo get_option('blogname'); ?></span>
+            <?php
+            if (has_custom_logo()) {
+              echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+            }
+            ?>
           </a>
 
           <?php if (has_nav_menu('primary-menu')) {

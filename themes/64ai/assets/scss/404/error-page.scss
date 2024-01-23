@@ -75,7 +75,7 @@
     line-height: 1.5;
     border: none;
     background-color: $gr;
-    color: $lg;
+    color: $light;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -83,7 +83,7 @@
 
     &:hover {
       background-color: $dk;
-      color: $lg;
+      color: $light;
     }
   }
 }

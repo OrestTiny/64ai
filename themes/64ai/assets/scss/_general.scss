@@ -114,11 +114,11 @@ input[type="button"] {
   padding: 10px 20px;
   border-radius: 5px;
   background-color: $dk;
-  color: $lg;
+  color: $light;
 
   &:hover {
     color: $dk;
-    background-color: $lg;
+    background-color: $light;
   }
 
   &[disabled] {
@@ -131,10 +131,11 @@ a {
   outline: 0;
   text-decoration: none;
   transition: color 450ms ease;
+  font-weight: 600;
 
   &:hover,
   &:focus {
-    color: $gr;
+    color: $blue;
   }
 }
 
@@ -209,7 +210,7 @@ select {
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  color: $lg;
+  color: $light;
   margin: 0;
 
   &:focus {
@@ -277,17 +278,17 @@ input {
 
 ::-moz-selection {
   background: $dk;
-  color: $lg;
+  color: $light;
 }
 
 ::selection {
   background: $dk;
-  color: $lg;
+  color: $light;
 }
 
 ::-moz-selection {
   background: $dk;
-  color: $lg;
+  color: $light;
 }
 
 :focus {
