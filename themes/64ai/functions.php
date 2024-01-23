@@ -23,6 +23,7 @@ require_once SIXTYAI_T_PATH . '/include/customizer.php';
 require_once SIXTYAI_T_PATH . '/include/function-helper.php';
 require_once SIXTYAI_T_PATH . '/include/function-global.php';
 require_once SIXTYAI_T_PATH . '/include/optimization.php';
+require_once SIXTYAI_T_PATH . '/include/site-options.php';
 
 
 if (file_exists(SIXTYAI_T_PATH . '/lib/cmb2/init.php')) {

@@ -9,6 +9,10 @@
   a {
     color: $dk;
     font-size: 18px;
+
+    &:hover {
+      color: var(--blue);
+    }
   }
 
   li {
