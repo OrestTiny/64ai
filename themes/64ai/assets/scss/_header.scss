@@ -1,0 +1,125 @@
+.upqode-header {
+  background-color: $dk;
+  padding: 30px 0;
+  $th: &;
+
+  a {
+    color: $lg;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  &__menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .header-menu {
+      display: flex;
+      gap: 20px;
+
+      @include lg-min {
+        &>li {
+          position: relative;
+
+          &:hover>.sub-menu {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          &:has(.sub-menu) {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &::after {
+              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+              line-height: 0;
+              width: 10px;
+            }
+          }
+        }
+
+        .sub-menu {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          left: 0;
+          top: 100%;
+          background-color: $lg;
+          width: 150px;
+          box-shadow: 0 0 14px 4px rgba(0, 0, 0, .4);
+
+          a {
+            color: $dk;
+          }
+        }
+      }
+    }
+  }
+
+
+  // ! Burger
+  &__burger {
+    display: none;
+
+    @include lg-max {
+      width: 25px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &>span {
+        width: 100%;
+        height: 2px;
+        background-color: $lg;
+      }
+    }
+  }
+
+  &__menu {
+    @include lg-max {
+      position: fixed;
+      inset: 0;
+      background-color: $lg;
+      width: 300px;
+      padding: 30px;
+      overflow: hidden auto;
+      justify-content: flex-start;
+      transform: translateX(-200%);
+
+
+      a {
+        color: $dk;
+      }
+
+      &>ul {
+        flex-direction: column;
+      }
+    }
+  }
+
+
+  &.menu-open {
+    #{$th}__menu {
+      transition: transform 450ms;
+      transform: translate(0);
+    }
+  }
+}

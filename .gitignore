@@ -7,7 +7,6 @@ upgrade
 .DS_Store
 mu-plugins
 plugins/*
-themes/*
 ai1wm-backups
 languages
 debug.log

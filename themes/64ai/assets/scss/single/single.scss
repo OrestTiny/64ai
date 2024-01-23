@@ -1,0 +1,12 @@
+@import '../vars';
+
+.upqode-single {
+  padding: 100px 0;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}

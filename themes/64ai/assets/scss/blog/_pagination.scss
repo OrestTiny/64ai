@@ -1,0 +1,41 @@
+  .upqode-pagination {
+    text-align: center;
+    margin-top: 63px;
+    margin-bottom: 23px;
+
+    @include lg-max {
+      margin-top: 53px;
+    }
+
+    @include sm-max {
+      margin-top: 33px;
+      margin-bottom: 53px;
+    }
+
+    @include xs-max {
+      margin-top: 15px;
+      margin-bottom: 23px;
+    }
+
+    .page-numbers {
+      color: var(--c-grey);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      margin: 8px;
+      font-size: 1rem;
+
+      &:hover {
+        color: $gr;
+      }
+
+      &.current {
+        background: $gr;
+        color: $lg;
+        padding: 10px 15px;
+        font-weight: 500;
+        border-radius: var(--post-br);
+      }
+    }
+  }
