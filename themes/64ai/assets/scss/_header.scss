@@ -106,7 +106,7 @@
         }
       }
 
-      .menu-item-has-children {
+      &>.menu-item-has-children {
 
         &:hover {
           @include lg-min {
@@ -136,6 +136,10 @@
             margin: 0 0 0 10px;
             display: none;
 
+            .sub-menu {
+              display: block;
+            }
+
             a {
               font-weight: 400;
             }
@@ -156,6 +160,52 @@
             }
           }
         }
+
+        &>.sub-menu {
+          .icon-angle-down {
+            display: none;
+          }
+        }
+
+        @include lg-min {
+          &>.sub-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: $light;
+            width: 325px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-bottom: 1px solid rgba(84, 72, 80, 0.25);
+            box-shadow: 0px 6px 34px rgba(0, 0, 0, 0.16);
+            margin: 0;
+
+            .current_page_item {
+              &>a {
+                color: var(--blue);
+              }
+            }
+
+            a {
+              color: $dk;
+              font-weight: 400;
+
+              &:hover {
+                color: $blue;
+                text-decoration: underline;
+                text-underline-offset: 2px;
+              }
+            }
+
+            .sub-menu {
+              padding-left: 0;
+            }
+          }
+        }
       }
 
       @include lg-min {
@@ -168,39 +218,7 @@
           }
         }
 
-        .sub-menu {
-          opacity: 0;
-          visibility: hidden;
-          position: absolute;
-          left: 0;
-          top: 100%;
-          background-color: $light;
-          width: 325px;
-          padding: 32px;
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          border-bottom: 1px solid rgba(84, 72, 80, 0.25);
-          box-shadow: 0px 6px 34px rgba(0, 0, 0, 0.16);
-          margin: 0;
 
-          .current_page_item {
-            &>a {
-              color: var(--blue);
-            }
-          }
-
-          a {
-            color: $dk;
-            font-weight: 400;
-
-            &:hover {
-              color: $blue;
-              text-decoration: underline;
-              text-underline-offset: 2px;
-            }
-          }
-        }
       }
     }
   }
@@ -275,7 +293,7 @@
       position: fixed;
       inset: 90px 0 0;
       background-color: $light;
-      width: 300px;
+      width: 325px;
       padding: 30px;
       overflow: hidden auto;
       justify-content: flex-start;
