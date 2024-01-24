@@ -26,13 +26,13 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
   <div class="container">
     <div class="sixtyia-footer__wrap">
       <div class="sixtyia-footer__wrap-left">
-        <a class="sixtyia-footer__logo" href="<?php echo esc_url(home_url('/')); ?>">
+        <!-- <a class="sixtyia-footer__logo" href="<?php echo esc_url(home_url('/')); ?>">
           <?php
           if (has_custom_logo()) {
             echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
           }
           ?>
-        </a>
+        </a> -->
 
         <ul class="sixtyia-footer__social">
           <?php if (!empty($social)) { ?>
