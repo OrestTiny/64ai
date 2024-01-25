@@ -71,23 +71,15 @@ h6 {
 }
 
 h1 {
-  font-size: 50px;
-
-  @include xl-max {
-    font-size: 40px;
-  }
-
-  @include md-max {
-    font-size: 30px;
-  }
+  font-size: 36px;
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 h4 {
@@ -99,7 +91,7 @@ h5 {
 }
 
 h6 {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 p {
@@ -383,6 +375,16 @@ div.wpforms-container-full button[type=submit] {
 }
 
 .elementor-widget-text-editor {
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  h2,
+  h3 {
+    margin-bottom: 20px;
+  }
+
+
   ul {
     padding-left: 20px;
   }
