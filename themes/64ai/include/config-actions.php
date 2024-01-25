@@ -88,7 +88,7 @@ if (!function_exists('upqode_enqueue_scripts')) {
       wp_enqueue_script('comment-reply');
     }
 
-    wp_enqueue_script('sixtyia-script', SIXTYAI_T_URI . '/assets/js/script.min.js', array(), '', true);
+    wp_enqueue_script('sixtyia-script', SIXTYAI_T_URI . '/assets/js/script.min.js', array('jquery'), '', true);
   }
 }
 

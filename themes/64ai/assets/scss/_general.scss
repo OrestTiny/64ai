@@ -134,6 +134,10 @@ a {
   &:focus {
     color: $blue;
   }
+
+  &[href="#"] {
+    cursor: default;
+  }
 }
 
 .btn {
@@ -384,10 +388,14 @@ div.wpforms-container-full button[type=submit] {
     margin-bottom: 20px;
   }
 
+  a {
+    text-decoration: underline;
+  }
 
   ul {
     list-style-position: outside;
     padding-left: 38px;
+    margin: 20px 0;
 
     ul {
       margin: 15px 0 0;

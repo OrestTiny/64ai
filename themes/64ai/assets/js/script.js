@@ -78,19 +78,38 @@
     const header = $('.sixtyia-header');
     const subMenu = $('.sub-menu');
 
-
-
     if (windowW >= 992) {
       overlay.removeClass('active');
       header.removeClass('menu-open');
       subMenu.removeAttr('style');
-    } else {
-      const btn = $('.sixtyia-header .icon-angle-down');
-
-      btn.click(function () {
-        $(this).next().stop(true).slideToggle();
-      })
     }
   })
+
+
+  const btn = $('.sixtyia-header .icon-angle-down');
+
+  if (btn) {
+    btn.each(function () {
+      $(this).click(function () {
+        const windowW = $(window).innerWidth();
+
+        if (windowW <= 992) {
+          $(this).next().stop(true).slideToggle();
+        }
+      })
+    })
+  }
+
+
+  const noLink = $('a[href="#"]');
+
+  if (noLink) {
+    noLink.each(function () {
+      $(this).click(function (el) {
+        el.preventDefault();
+      })
+    })
+  }
+
 
 })(jQuery, window, document);
