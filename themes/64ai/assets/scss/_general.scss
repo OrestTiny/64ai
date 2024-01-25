@@ -169,7 +169,7 @@ a {
 
 strong,
 b {
-  font-weight: 700;
+  font-weight: 600;
   color: $dk;
 }
 
@@ -379,5 +379,11 @@ div.wpforms-container-full button[type=submit] {
         flex: 1 0 100%;
       }
     }
+  }
+}
+
+.elementor-widget-text-editor {
+  ul {
+    padding-left: 20px;
   }
 }
