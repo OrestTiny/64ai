@@ -386,7 +386,17 @@ div.wpforms-container-full button[type=submit] {
 
 
   ul {
-    list-style: outside;
+    list-style-position: outside;
     padding-left: 38px;
+
+    ul {
+      margin: 15px 0 0;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
