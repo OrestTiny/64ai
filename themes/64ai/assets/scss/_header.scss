@@ -21,6 +21,10 @@
     @include lg-max {
       height: 90px;
     }
+
+    @include md-max {
+      gap: 20px;
+    }
   }
 
   &__logo {
@@ -69,7 +73,7 @@
 
       @include lg-max {
         height: auto;
-        margin-left: auto;
+        // margin-left: auto;
 
         &:hover {
           color: var(--blue);
@@ -327,8 +331,20 @@
       justify-content: flex-start;
       transform: translateX(-200%);
 
+      .menu-item-has-children {
+        &:hover {
+
+          &>a,
+          &>i {
+            color: var(--blue);
+          }
+        }
+      }
+
       a {
         color: $dk;
+        flex: 1;
+        cursor: pointer !important;
       }
 
       &>ul {

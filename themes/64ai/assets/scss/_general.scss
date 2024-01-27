@@ -136,12 +136,12 @@ a {
   }
 
   &[href="#"] {
-    cursor: default;
+    cursor: default !important;
   }
 }
 
 .btn {
-  padding: 8px 23px;
+  padding: 0 23px;
   font-size: 18px;
   line-height: 1;
   border-radius: 32px;
@@ -150,6 +150,10 @@ a {
   border: thin solid $light;
   background: $blue;
   transition: all 350ms ease;
+  height: 42px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background: $light;

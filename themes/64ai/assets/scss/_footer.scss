@@ -119,6 +119,11 @@
           text-decoration: underline;
         }
 
+        &[href="#"] {
+          color: $dk !important;
+          text-decoration: none !important;
+        }
+
       }
 
       &>li {
